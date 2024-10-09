@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",  // Output compiled JS files to the dist directory
+    "rootDir": "./src",  // Specify the root directory for your source TS files (optional)
+    "target": "es6",     // Set the target JavaScript version
+    "module": "commonjs",// Set the module system
+    "strict": true,      // Enable strict type-checking
+    "esModuleInterop": true
+  }
+}
