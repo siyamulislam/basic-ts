@@ -1,46 +1,78 @@
 const greeting: string = 'Hello, TypeScript!';
 console.log(greeting);
 
+// dynamic type or any
 
-// Explicit typeof variable 
-let age:number 
-age=24
-console.log(age);
+// this is not recommended approach , act as vanilla js
 
-//  with union
-let age2:(number|string)
-age2=24
-age2 ='siam'
-console.log(age2);
-
- // Explicit typeof array 
-let x:string[]=[];
-x.push('siam')
-x.push('siam2')
-console.log(x);
-
-// with union
-let y:(string| number)[]=[];
-y.push('siam')
-y.push(24)
-console.log(y);
-
+let a: any; //same as let a;
+a =15;
+a= 'this is string '
+console.log(a);
+// arr
+let b: any[]=[];
+b.push("Bangladesh")
+b.push(24)
+console.log(b);
 
 // object
-
-let c: {
-    name: string,
-    age: number
-};
-c = {
-    name: '$toma',
-    age: 27
+let c:{
+    name:any,
+    age:any
 }
+c={
+    name: "Siam",
+    age:24
+}
+
 console.log(c);
 
-let b: object;
-b = [1, 2, 3, 4, 5, 6] //array is a type of object in js
-console.log(b);
+
+
+
+
+
+
+
+// // Explicit typeof variable 
+// let age:number 
+// age=24
+// console.log(age);
+
+// //  with union
+// let age2:(number|string)
+// age2=24
+// age2 ='siam'
+// console.log(age2);
+
+//  // Explicit typeof array 
+// let x:string[]=[];
+// x.push('siam')
+// x.push('siam2')
+// console.log(x);
+
+// // with union
+// let y:(string| number)[]=[];
+// y.push('siam')
+// y.push(24)
+// console.log(y);
+
+
+// // object
+
+// let c: {
+//     name: string,
+//     age: number
+// };
+// c = {
+//     name: '$toma',
+//     age: 27
+// }
+// console.log(c);
+
+// let b: object;
+// b = [1, 2, 3, 4, 5, 6] //array is a type of object in js
+// console.log(b);
 
 
 
