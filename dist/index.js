@@ -1,15 +1,37 @@
 "use strict";
 const greeting = 'Hello, TypeScript!';
 console.log(greeting);
-const userDetails = (id, user) => {
-    console.log(`user id= ${id}, name= ${user.name} and age= ${user.age}`);
+// function signature
+let myFunc;
+let add;
+add = (a, b) => {
+    return a + b;
 };
-userDetails(121, { name: 'siam', age: 25 });
-const sayHello = (user) => {
-    console.log(`Hello ${user.age > 50 ? 'sir' : 'mr'}.${user.name}`);
+let calc;
+calc = (a, b, c) => {
+    if (c === 'add')
+        return a + b;
+    else if (c === 'sub')
+        return a - b;
+    else
+        return 0;
 };
-sayHello({ name: 'Siam', age: 25 });
-sayHello({ name: 'Chu', age: 65 });
+console.log(calc(15, 5, 'sub'));
+// // type Aliases
+// type stringOrNumber =  number | string;
+// type userType =  { name: string, age: number };
+// const userDetails = (
+//     id: stringOrNumber,
+//     user: userType
+// ) => {
+//     console.log(`user id= ${id}, name= ${user.name} and age= ${user.age}`);
+// }
+// userDetails(121,{name:'siam',age:25})
+// const sayHello=(user: userType)=>{
+//     console.log(`Hello ${user.age>50?'sir':'mr'}.${user.name}`);
+// }
+// sayHello({name:'Siam',age:25})
+// sayHello({name:'Chu',age:65})
 // // function with types
 // let myFun: Function;
 // myFun=(a:string,b?:string, c:string='default man')=>{

@@ -4,25 +4,48 @@ console.log(greeting);
 
 
 
-// type Aliases 
 
-type stringOrNumber =  number | string;
-type userType =  { name: string, age: number };
+// function signature
 
-const userDetails = (
-    id: stringOrNumber,
-    user: userType
-) => {
-    console.log(`user id= ${id}, name= ${user.name} and age= ${user.age}`);
-}
-userDetails(121,{name:'siam',age:25})
+let myFunc: () => void;
 
-const sayHello=(user: userType)=>{
-    console.log(`Hello ${user.age>50?'sir':'mr'}.${user.name}`);
+let add: (x: number, y: number) => number;
+add = (a: number, b: number) => {
+    return a + b
 }
 
-sayHello({name:'Siam',age:25})
-sayHello({name:'Chu',age:65})
+
+let calc: (x: number, y: number, z: string) => number;
+
+calc = (a: number, b: number, c: string) => {
+    if (c === 'add') return a + b
+    else if  (c === 'sub') return a - b
+    else return 0;
+}
+
+console.log(calc(15,5,'sub'));
+
+
+
+// // type Aliases
+
+// type stringOrNumber =  number | string;
+// type userType =  { name: string, age: number };
+
+// const userDetails = (
+//     id: stringOrNumber,
+//     user: userType
+// ) => {
+//     console.log(`user id= ${id}, name= ${user.name} and age= ${user.age}`);
+// }
+// userDetails(121,{name:'siam',age:25})
+
+// const sayHello=(user: userType)=>{
+//     console.log(`Hello ${user.age>50?'sir':'mr'}.${user.name}`);
+// }
+
+// sayHello({name:'Siam',age:25})
+// sayHello({name:'Chu',age:65})
 
 
 
