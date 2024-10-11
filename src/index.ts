@@ -1,36 +1,46 @@
 const greeting: string = 'Hello, TypeScript!';
 console.log(greeting);
 
-// dynamic type or any
 
-// this is not recommended approach , act as vanilla js
 
-let a: any; //same as let a;
-a =15;
-a= 'this is string '
-console.log(a);
-// arr
-let b: any[]=[];
-b.push("Bangladesh")
-b.push(24)
-console.log(b);
 
-// object
-let c:{
-    name:any,
-    age:any
+let myFun: Function;
+myFun=(a:string,b?:string, c:string='default man')=>{
+    console.log(`hello ${a}, ${b} and ${c}`);
 }
-c={
-    name: "Siam",
-    age:24
-}
+// b? mean its optional where c optional
+myFun('p1','j7')
 
-console.log(c);
-
-
-
+let sum=(a:number,b:number=10,):number=>{
+    return(a+b);
+} 
+console.log(sum(20,40));
 
 
+
+// // dynamic type or any
+// // this is not recommended approach , act as vanilla js
+
+// let a: any; //same as let a;
+// a =15;
+// a= 'this is string '
+// console.log(a);
+// // arr
+// let b: any[]=[];
+// b.push("Bangladesh")
+// b.push(24)
+// console.log(b);
+
+// // object
+// let c:{
+//     name:any,
+//     age:any
+// }
+// c={
+//     name: "Siam",
+//     age:24
+// }
+// console.log(c);
 
 
 

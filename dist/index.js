@@ -1,24 +1,37 @@
 "use strict";
 const greeting = 'Hello, TypeScript!';
 console.log(greeting);
-// dynamic type or any
-// this is not recommended approach , act as vanilla js
-let a; //same as let a;
-a = 15;
-a = 'this is string ';
-console.log(a);
-// arr
-let b = [];
-b.push("Bangladesh");
-b.push(24);
-console.log(b);
-// object
-let c;
-c = {
-    name: "Siam",
-    age: 24
+let myFun;
+myFun = (a, b, c = 'default man') => {
+    console.log(`hello ${a}, ${b} and ${c}`);
 };
-console.log(c);
+// b? mean its optional where c optional
+myFun('p1', 'j7');
+let sum = (a, b = 10) => {
+    return (a + b);
+};
+console.log(sum(20, 40));
+// // dynamic type or any
+// // this is not recommended approach , act as vanilla js
+// let a: any; //same as let a;
+// a =15;
+// a= 'this is string '
+// console.log(a);
+// // arr
+// let b: any[]=[];
+// b.push("Bangladesh")
+// b.push(24)
+// console.log(b);
+// // object
+// let c:{
+//     name:any,
+//     age:any
+// }
+// c={
+//     name: "Siam",
+//     age:24
+// }
+// console.log(c);
 // // Explicit typeof variable 
 // let age:number 
 // age=24
