@@ -1,22 +1,37 @@
 "use strict";
 const greeting = 'Hello, TypeScript!';
 console.log(greeting);
-// function signature
-let myFunc;
-let add;
-add = (a, b) => {
-    return a + b;
-};
-let calc;
-calc = (a, b, c) => {
-    if (c === 'add')
-        return a + b;
-    else if (c === 'sub')
-        return a - b;
-    else
-        return 0;
-};
-console.log(calc(15, 5, 'sub'));
+// classes
+class Player {
+    constructor(n, a, c) {
+        this.name = n;
+        this.age = a;
+        this.country = c;
+    }
+    play() {
+        console.log(`${this.name} from ${this.country} is playing now!`);
+    }
+}
+const azam = new Player("Babar Azam", 44, 'Pakistan');
+const musi = new Player("Musfiqur Rahim", 44, 'Bangladesh');
+const players = [];
+players.push(azam);
+players.push(musi);
+players[0].play();
+console.log(musi.age);
+// // function signature
+// let myFunc: () => void;
+// let add: (x: number, y: number) => number;
+// add = (a: number, b: number) => {
+//     return a + b
+// }
+// let calc: (x: number, y: number, z: string) => number;
+// calc = (a: number, b: number, c: string) => {
+//     if (c === 'add') return a + b
+//     else if (c === 'sub') return a - b
+//     else return 0;
+// }
+// console.log(calc(15, 5, 'sub'));
 // // type Aliases
 // type stringOrNumber =  number | string;
 // type userType =  { name: string, age: number };
