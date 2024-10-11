@@ -1,9 +1,8 @@
 "use strict";
 const greeting = 'Hello, TypeScript!';
 console.log(greeting);
-// type Aliases 
 const userDetails = (id, user) => {
-    console.log(`user id= ${id}, name= ${user.name}  and age= ${user.age}`);
+    console.log(`user id= ${id}, name= ${user.name} and age= ${user.age}`);
 };
 userDetails(121, { name: 'siam', age: 25 });
 const sayHello = (user) => {

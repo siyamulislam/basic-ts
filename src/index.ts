@@ -6,16 +6,18 @@ console.log(greeting);
 
 // type Aliases 
 
+type stringOrNumber =  number | string;
+type userType =  { name: string, age: number };
 
 const userDetails = (
-    id: number | string,
-    user: { name: string, age: number }
+    id: stringOrNumber,
+    user: userType
 ) => {
-    console.log(`user id= ${id}, name= ${user.name}  and age= ${user.age}`);
+    console.log(`user id= ${id}, name= ${user.name} and age= ${user.age}`);
 }
 userDetails(121,{name:'siam',age:25})
 
-const sayHello=(user: { name: string, age: number })=>{
+const sayHello=(user: userType)=>{
     console.log(`Hello ${user.age>50?'sir':'mr'}.${user.name}`);
 }
 
