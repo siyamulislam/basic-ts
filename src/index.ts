@@ -4,18 +4,55 @@ console.log(greeting);
 
 
 
-let myFun: Function;
-myFun=(a:string,b?:string, c:string='default man')=>{
-    console.log(`hello ${a}, ${b} and ${c}`);
+// type Aliases 
+
+
+const userDetails = (
+    id: number | string,
+    user: { name: string, age: number }
+) => {
+    console.log(`user id= ${id}, name= ${user.name}  and age= ${user.age}`);
 }
-// b? mean its optional where c optional
-myFun('p1','j7')
+userDetails(121,{name:'siam',age:25})
 
-let sum=(a:number,b:number=10,):number=>{
-    return(a+b);
-} 
-console.log(sum(20,40));
+const sayHello=(user: { name: string, age: number })=>{
+    console.log(`Hello ${user.age>50?'sir':'mr'}.${user.name}`);
+}
 
+sayHello({name:'Siam',age:25})
+sayHello({name:'Chu',age:65})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // function with types
+// let myFun: Function;
+// myFun=(a:string,b?:string, c:string='default man')=>{
+//     console.log(`hello ${a}, ${b} and ${c}`);
+// }
+// // b? mean its optional where c optional
+// myFun('p1','j7')
+
+// let sum=(a:number,b:number=10,):number=>{
+//     return(a+b);
+// }
+// console.log(sum(20,40));
 
 
 // // dynamic type or any
@@ -44,8 +81,8 @@ console.log(sum(20,40));
 
 
 
-// // Explicit typeof variable 
-// let age:number 
+// // Explicit typeof variable
+// let age:number
 // age=24
 // console.log(age);
 
@@ -55,7 +92,7 @@ console.log(sum(20,40));
 // age2 ='siam'
 // console.log(age2);
 
-//  // Explicit typeof array 
+//  // Explicit typeof array
 // let x:string[]=[];
 // x.push('siam')
 // x.push('siam2')

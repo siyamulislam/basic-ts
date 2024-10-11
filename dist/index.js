@@ -1,16 +1,27 @@
 "use strict";
 const greeting = 'Hello, TypeScript!';
 console.log(greeting);
-let myFun;
-myFun = (a, b, c = 'default man') => {
-    console.log(`hello ${a}, ${b} and ${c}`);
+// type Aliases 
+const userDetails = (id, user) => {
+    console.log(`user id= ${id}, name= ${user.name}  and age= ${user.age}`);
 };
-// b? mean its optional where c optional
-myFun('p1', 'j7');
-let sum = (a, b = 10) => {
-    return (a + b);
+userDetails(121, { name: 'siam', age: 25 });
+const sayHello = (user) => {
+    console.log(`Hello ${user.age > 50 ? 'sir' : 'mr'}.${user.name}`);
 };
-console.log(sum(20, 40));
+sayHello({ name: 'Siam', age: 25 });
+sayHello({ name: 'Chu', age: 65 });
+// // function with types
+// let myFun: Function;
+// myFun=(a:string,b?:string, c:string='default man')=>{
+//     console.log(`hello ${a}, ${b} and ${c}`);
+// }
+// // b? mean its optional where c optional
+// myFun('p1','j7')
+// let sum=(a:number,b:number=10,):number=>{
+//     return(a+b);
+// }
+// console.log(sum(20,40));
 // // dynamic type or any
 // // this is not recommended approach , act as vanilla js
 // let a: any; //same as let a;
@@ -32,8 +43,8 @@ console.log(sum(20, 40));
 //     age:24
 // }
 // console.log(c);
-// // Explicit typeof variable 
-// let age:number 
+// // Explicit typeof variable
+// let age:number
 // age=24
 // console.log(age);
 // //  with union
@@ -41,7 +52,7 @@ console.log(sum(20, 40));
 // age2=24
 // age2 ='siam'
 // console.log(age2);
-//  // Explicit typeof array 
+//  // Explicit typeof array
 // let x:string[]=[];
 // x.push('siam')
 // x.push('siam2')
