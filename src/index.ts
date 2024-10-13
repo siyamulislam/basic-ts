@@ -5,24 +5,35 @@ const greeting: string = 'Hello, TypeScript!';
 console.log(greeting);
 
 
-// GENERICS <T> here is T used instead ob object
-// const addID = <T extends object> (obj: T) => {
+// GENERICS <T>
 
-const addID = <T extends {name:string;age:number}> (obj: T) => {
-    let id = Math.floor(Math.random() * 100);
-    return { ...obj, id };
-};
-let user = addID({
-    name: "Jack",
-    age: 40,
-    country:'usa'
-})
-console.log(user);
+interface APIResponse<T> {
+    status: number;
+    type: string;
+    data: T;
+}
+const response1: APIResponse<object> = {
+    status: 200,
+    type: 'json',
+    data: {
+        name: 'Jack',
+        balance: 300
+    }
+}
+console.log(response1);
 
+// // const addID = <T extends object> (obj: T) => {
 
-
-
-
+// const addID = <T extends {name:string;age:number}> (obj: T) => {
+//     let id = Math.floor(Math.random() * 100);
+//     return { ...obj, id };
+// };
+// let user = addID({
+//     name: "Jack",
+//     age: 40,
+//     country:'usa'
+// })
+// console.log(user);
 
 
 

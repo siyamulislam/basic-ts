@@ -1,18 +1,26 @@
 const greeting = 'Hello, TypeScript!';
 console.log(greeting);
-// GENERICS <T> here is T used instead ob object
-// const addID = <T extends object> (obj: T) => {
-const addID = (obj) => {
-    let id = Math.floor(Math.random() * 100);
-    return Object.assign(Object.assign({}, obj), { id });
+const response1 = {
+    status: 200,
+    type: 'json',
+    data: {
+        name: 'Jack',
+        balance: 300
+    }
 };
-let user = addID({
-    name: "Jack",
-    age: 40,
-    country: 'usa'
-});
-console.log(user);
+console.log(response1);
 export {};
+// // const addID = <T extends object> (obj: T) => {
+// const addID = <T extends {name:string;age:number}> (obj: T) => {
+//     let id = Math.floor(Math.random() * 100);
+//     return { ...obj, id };
+// };
+// let user = addID({
+//     name: "Jack",
+//     age: 40,
+//     country:'usa'
+// })
+// console.log(user);
 // // Interfaces
 // interface RectOptions {
 //     width: number;
