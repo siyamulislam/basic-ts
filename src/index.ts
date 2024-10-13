@@ -1,29 +1,12 @@
+import { Player } from "./classes/Player.js";
+
 const greeting: string = 'Hello, TypeScript!';
 console.log(greeting);
 
 
 
 
-
-
-
-
-
-// classes
-
-class Player {
-
-
-    constructor(  
-        public name: string,
-        private age: number,
-        readonly country: string
-    ) {}
-
-    play() {
-        console.log(`${this.name} (${this.age}) from ${this.country} is playing now!`);
-    }
-}
+// module classes 
 
 const azam = new Player("Babar Azam", 44, 'Pakistan');
 const musi = new Player("Musfiqur Rahim", 44, 'Bangladesh');
@@ -35,11 +18,7 @@ players.push(musi)
 
 players[0].play();
 
-musi.name = "MUSI VAI"
-// musi.age = 32  //not accessible for private 
-// musi.country = "BD" //not changeable
 
-// console.log(musi.age);
 
 
 
