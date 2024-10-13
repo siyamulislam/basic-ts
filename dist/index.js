@@ -1,13 +1,21 @@
 import { Player } from "./classes/Player.js";
 const greeting = 'Hello, TypeScript!';
 console.log(greeting);
+function drawRect(options) {
+    let width = options.width;
+    let height = options.height;
+    console.log(options);
+    console.log(width * height);
+}
+let threeDims = { width: 30, height: 15, zAxis: 5 };
+drawRect(threeDims);
 // module classes 
 const azam = new Player("Babar Azam", 44, 'Pakistan');
 const musi = new Player("Musfiqur Rahim", 44, 'Bangladesh');
 const players = [];
 players.push(azam);
 players.push(musi);
-players[0].play();
+// players[0].play();
 // // function signature
 // let myFunc: () => void;
 // let add: (x: number, y: number) => number;

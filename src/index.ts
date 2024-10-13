@@ -4,6 +4,23 @@ const greeting: string = 'Hello, TypeScript!';
 console.log(greeting);
 
 
+// Interfaces
+
+interface RectOptions {
+    width: number;
+    height: number;
+}
+
+function drawRect(options: RectOptions) {
+    let width = options.width;
+    let height = options.height;
+    console.log(options);
+    console.log(width * height);
+}
+
+let threeDims = { width: 30, height: 15, zAxis: 5 }
+drawRect(threeDims)
+
 
 
 // module classes 
@@ -16,7 +33,7 @@ const players: Player[] = [];
 players.push(azam)
 players.push(musi)
 
-players[0].play();
+// players[0].play();
 
 
 
