@@ -5,23 +5,46 @@ const greeting: string = 'Hello, TypeScript!';
 console.log(greeting);
 
 
-// GENERICS <T>  +Enum
+//Tuples
 
-enum ResponseType {SUCCESS, fAILURE, FORBIDDEN, UNAUTHENTICATED}
-interface APIResponse<T> {
-    status: number;
-    type: ResponseType;
-    data: T;
-}
-const response1: APIResponse<object> = {
-    status: 200,
-    type: ResponseType.FORBIDDEN,
-    data: {
-        name: 'Jack',
-        balance: 300
-    }
-}
-console.log(response1);
+let a =[3, 'hello', {age:24}]
+a[1]=88 // array order not important but alt same type of arr data
+console.log(a);
+
+// apply tuple when array item fixed with type+position
+let b:[number,string,object,boolean] =[3, 'hello', {age:24},true]
+// b[1]=88 // array type order important
+
+console.log(b);
+
+
+
+
+
+
+
+
+
+
+
+
+// // GENERICS <T>  +Enum
+
+// enum ResponseType {SUCCESS, fAILURE, FORBIDDEN, UNAUTHENTICATED}
+// interface APIResponse<T> {
+//     status: number;
+//     type: ResponseType;
+//     data: T;
+// }
+// const response1: APIResponse<object> = {
+//     status: 200,
+//     type: ResponseType.FORBIDDEN,
+//     data: {
+//         name: 'Jack',
+//         balance: 300
+//     }
+// }
+// console.log(response1);
 
 // // const addID = <T extends object> (obj: T) => {
 
