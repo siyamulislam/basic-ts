@@ -12,18 +12,16 @@ console.log(greeting);
 // classes
 
 class Player {
-    name: string;
-    age: number;
-    country: string;
 
-    constructor(n: string, a: number, c: string) {
-        this.name = n;
-        this.age = a;
-        this.country = c;
-    }
+
+    constructor(  
+        public name: string,
+        private age: number,
+        readonly country: string
+    ) {}
 
     play() {
-        console.log(`${this.name} from ${this.country} is playing now!`);
+        console.log(`${this.name} (${this.age}) from ${this.country} is playing now!`);
     }
 }
 
@@ -36,9 +34,14 @@ players.push(azam)
 players.push(musi)
 
 players[0].play();
-console.log(musi.age);
 
- 
+musi.name = "MUSI VAI"
+// musi.age = 32  //not accessible for private 
+// musi.country = "BD" //not changeable
+
+// console.log(musi.age);
+
+
 
 // // function signature
 
