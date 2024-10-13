@@ -1,3 +1,4 @@
+import { IsPlayer } from './interfaces/IsPlayer';
 import { Player } from "./classes/Player.js";
 
 const greeting: string = 'Hello, TypeScript!';
@@ -26,9 +27,10 @@ drawRect(threeDims)
 // module classes 
 
 const azam = new Player("Babar Azam", 44, 'Pakistan');
-const musi = new Player("Musfiqur Rahim", 44, 'Bangladesh');
+let musi: IsPlayer;
+musi= new Player("Musfiqur Rahim", 44, 'Bangladesh');
 
-const players: Player[] = [];
+const players: IsPlayer[] = [];
 
 players.push(azam)
 players.push(musi)

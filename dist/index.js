@@ -11,7 +11,8 @@ let threeDims = { width: 30, height: 15, zAxis: 5 };
 drawRect(threeDims);
 // module classes 
 const azam = new Player("Babar Azam", 44, 'Pakistan');
-const musi = new Player("Musfiqur Rahim", 44, 'Bangladesh');
+let musi;
+musi = new Player("Musfiqur Rahim", 44, 'Bangladesh');
 const players = [];
 players.push(azam);
 players.push(musi);
