@@ -5,6 +5,27 @@ const greeting: string = 'Hello, TypeScript!';
 console.log(greeting);
 
 
+// GENERICS <T> here is T used instead ob object
+// const addID = <T extends object> (obj: T) => {
+
+const addID = <T extends {name:string;age:number}> (obj: T) => {
+    let id = Math.floor(Math.random() * 100);
+    return { ...obj, id };
+};
+let user = addID({
+    name: "Jack",
+    age: 40,
+    country:'usa'
+})
+console.log(user);
+
+
+
+
+
+
+
+
 // // Interfaces
 
 // interface RectOptions {
@@ -24,18 +45,18 @@ console.log(greeting);
 
 
 
-// module classes 
+// // module classes
 
-const azam = new Player("Babar Azam", 44, 'Pakistan');
-let musi: IsPlayer;
-musi= new Player("Musfiqur Rahim", 44, 'Bangladesh');
+// const azam = new Player("Babar Azam", 44, 'Pakistan');
+// let musi: IsPlayer;
+// musi= new Player("Musfiqur Rahim", 44, 'Bangladesh');
 
-const players: IsPlayer[] = [];
+// const players: IsPlayer[] = [];
 
-players.push(azam)
-players.push(musi)
+// players.push(azam)
+// players.push(musi)
 
-// players[0].play();
+// // players[0].play();
 
 
 

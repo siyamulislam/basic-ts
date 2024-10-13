@@ -1,6 +1,18 @@
-import { Player } from "./classes/Player.js";
 const greeting = 'Hello, TypeScript!';
 console.log(greeting);
+// GENERICS <T> here is T used instead ob object
+// const addID = <T extends object> (obj: T) => {
+const addID = (obj) => {
+    let id = Math.floor(Math.random() * 100);
+    return Object.assign(Object.assign({}, obj), { id });
+};
+let user = addID({
+    name: "Jack",
+    age: 40,
+    country: 'usa'
+});
+console.log(user);
+export {};
 // // Interfaces
 // interface RectOptions {
 //     width: number;
@@ -14,14 +26,14 @@ console.log(greeting);
 // }
 // let threeDims = { width: 30, height: 15, zAxis: 5 }
 // drawRect(threeDims)
-// module classes 
-const azam = new Player("Babar Azam", 44, 'Pakistan');
-let musi;
-musi = new Player("Musfiqur Rahim", 44, 'Bangladesh');
-const players = [];
-players.push(azam);
-players.push(musi);
-// players[0].play();
+// // module classes
+// const azam = new Player("Babar Azam", 44, 'Pakistan');
+// let musi: IsPlayer;
+// musi= new Player("Musfiqur Rahim", 44, 'Bangladesh');
+// const players: IsPlayer[] = [];
+// players.push(azam)
+// players.push(musi)
+// // players[0].play();
 // // function signature
 // let myFunc: () => void;
 // let add: (x: number, y: number) => number;
