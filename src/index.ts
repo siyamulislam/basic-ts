@@ -5,16 +5,17 @@ const greeting: string = 'Hello, TypeScript!';
 console.log(greeting);
 
 
-// GENERICS <T>
+// GENERICS <T>  +Enum
 
+enum ResponseType {SUCCESS, fAILURE, FORBIDDEN, UNAUTHENTICATED}
 interface APIResponse<T> {
     status: number;
-    type: string;
+    type: ResponseType;
     data: T;
 }
 const response1: APIResponse<object> = {
     status: 200,
-    type: 'json',
+    type: ResponseType.FORBIDDEN,
     data: {
         name: 'Jack',
         balance: 300

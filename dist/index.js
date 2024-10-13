@@ -1,8 +1,16 @@
 const greeting = 'Hello, TypeScript!';
 console.log(greeting);
+// GENERICS <T>  +Enum
+var ResponseType;
+(function (ResponseType) {
+    ResponseType[ResponseType["SUCCESS"] = 0] = "SUCCESS";
+    ResponseType[ResponseType["fAILURE"] = 1] = "fAILURE";
+    ResponseType[ResponseType["FORBIDDEN"] = 2] = "FORBIDDEN";
+    ResponseType[ResponseType["UNAUTHENTICATED"] = 3] = "UNAUTHENTICATED";
+})(ResponseType || (ResponseType = {}));
 const response1 = {
     status: 200,
-    type: 'json',
+    type: ResponseType.FORBIDDEN,
     data: {
         name: 'Jack',
         balance: 300
