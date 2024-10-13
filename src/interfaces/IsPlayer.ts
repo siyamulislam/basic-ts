@@ -1,7 +1,8 @@
-export interface IsPlayer{
-    name:string;
-    age:number;
+export interface IsPlayer {
+    name: string;
+    // age: number;
     country: string;
 
-    play():void
+    play(): void
+    getAge():number
 }

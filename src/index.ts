@@ -5,22 +5,22 @@ const greeting: string = 'Hello, TypeScript!';
 console.log(greeting);
 
 
-// Interfaces
+// // Interfaces
 
-interface RectOptions {
-    width: number;
-    height: number;
-}
+// interface RectOptions {
+//     width: number;
+//     height: number;
+// }
 
-function drawRect(options: RectOptions) {
-    let width = options.width;
-    let height = options.height;
-    console.log(options);
-    console.log(width * height);
-}
+// function drawRect(options: RectOptions) {
+//     let width = options.width;
+//     let height = options.height;
+//     console.log(options);
+//     console.log(width * height);
+// }
 
-let threeDims = { width: 30, height: 15, zAxis: 5 }
-drawRect(threeDims)
+// let threeDims = { width: 30, height: 15, zAxis: 5 }
+// drawRect(threeDims)
 
 
 

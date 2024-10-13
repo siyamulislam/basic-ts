@@ -1,14 +1,19 @@
 import { Player } from "./classes/Player.js";
 const greeting = 'Hello, TypeScript!';
 console.log(greeting);
-function drawRect(options) {
-    let width = options.width;
-    let height = options.height;
-    console.log(options);
-    console.log(width * height);
-}
-let threeDims = { width: 30, height: 15, zAxis: 5 };
-drawRect(threeDims);
+// // Interfaces
+// interface RectOptions {
+//     width: number;
+//     height: number;
+// }
+// function drawRect(options: RectOptions) {
+//     let width = options.width;
+//     let height = options.height;
+//     console.log(options);
+//     console.log(width * height);
+// }
+// let threeDims = { width: 30, height: 15, zAxis: 5 }
+// drawRect(threeDims)
 // module classes 
 const azam = new Player("Babar Azam", 44, 'Pakistan');
 let musi;
