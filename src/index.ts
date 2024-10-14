@@ -19,15 +19,6 @@ console.log(b);
 
 
 
-
-
-
-
-
-
-
-
-
 // // GENERICS <T>  +Enum
 
 // enum ResponseType {SUCCESS, fAILURE, FORBIDDEN, UNAUTHENTICATED}

@@ -1,6 +1,5 @@
 # basic-ts
 
-
 note:
 1 run specific ts  
 tsc ./src/index.ts
