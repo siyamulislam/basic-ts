@@ -1,6 +1,7 @@
 # basic-ts
 
-note:
+note: 
+there is 2 way to run ts..
 1 run specific ts  
 tsc ./src/index.ts
 
